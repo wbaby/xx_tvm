@@ -1,0 +1,76 @@
+0xd0 p_a p_b p_c
+
+0x0499
+
+*(PUSHORT)p_a & *(PUSHORT)p_b;//无输出
+*(PULONG32)p_c = rf;
+----------------------------------------
+
+0x1400da35a : mov     r9, [rbp+8]                     
+0x1400da367 : mov     r8w, [r9]                       
+0x1400da36b : xor     r8w, 499h                       
+0x1400da371 : mov     rdx, 740EE29BB2F39201h          
+0x1400da37b : not     rdx                             
+0x1400da37e : lea     rdx, [r10+rdx]                  
+0x1400da382 : movzx   r8, r8w                         
+0x1400da386 : mov     rcx, 8BF11D644D0C6DFDh          
+0x1400da390 : not     rcx                             
+0x1400da393 : add     r8, rcx                         
+0x1400da396 : jmp     loc_1400D669C                   
+0x1400d669e : lea     r8, [rdx+r8]                    p_a = r8
+0x1400d66a2 : mov     r8w, [r8]                       r8w = *(PUSHORT)p_a
+0x1400d66a6 : lea     r9, [r9+2]                      
+0x1400d66aa : mov     dx, [r9]                        
+0x1400d66ae : xor     dx, 499h                        
+0x1400d66b3 : movzx   rdx, dx                         
+0x1400d66b7 : lea     rdx, [r10+rdx]                  p_b = rdx
+0x1400d66bb : mov     dx, [rdx]                       dx = *(PUSHORT)p_b
+0x1400d66be : lea     r9, [r9+2]                      
+0x1400d66c2 : mov     cx, [r9]                        
+0x1400d66c6 : xor     cx, 499h                        
+0x1400d66cb : mov     rax, 360AFF9891DBA8ECh          
+0x1400d66d5 : not     rax                             
+0x1400d66d8 : lea     rax, [r10+rax]                  
+0x1400d66dc : movzx   rcx, cx                         
+0x1400d66e0 : mov     rbx, 0C9F500676E245712h         
+0x1400d66ea : jmp     loc_1400D9699                   
+0x1400d969b : not     rbx                             
+0x1400d969e : add     rcx, rbx                        
+0x1400d96a1 : lea     rcx, [rax+rcx]                  p_c = rcx
+0x1400d96a5 : pushfq                                  
+0x1400d96a6 : mov     rax, [rsp+90h+var_90]           
+0x1400d96aa : lea     rsp, [rsp+8]                    
+0x1400d96af : mov     ebx, [rcx]                      rf
+0x1400d96b1 : mov     ebx, ebx                        
+0x1400d96b3 : lea     rsp, [rsp-8]                    
+0x1400d96b8 : mov     [rsp+90h+var_90], rbx           
+0x1400d96bc : popfq                                   
+0x1400d96bd : and     r8w, dx                         r8w = r8w & dx
+0x1400d96c1 : pushfq                                  
+0x1400d96c2 : mov     r8, [rsp+90h+var_90]            
+0x1400d96c6 : lea     rsp, [rsp+8]                    
+0x1400d96cb : mov     [rcx], r8d                      *(PULONG32)p_c = rf
+0x1400d96ce : lea     rsp, [rsp-8]                    
+0x1400d96d3 : mov     [rsp+90h+var_90], rax           
+0x1400d96d7 : popfq                                   
+0x1400d96d8 : jmp     loc_1400D9F97                   
+0x1400d9f99 : lea     r9, [r9+2]                      
+0x1400d9fa3 : mov     [rbp+8], r9                     
+0x1400d9fad : jmp     loc_1400D7232                   
+0x1400d7234 : mov     r9, [rbp+8]                     
+0x1400d7240 : jmp     loc_1400D99D9                   
+0x1400d99db : mov     r8b, [r9]                       
+0x1400d99de : xor     r8b, 5Dh                        
+0x1400d99e2 : mov     rdx, 25E9ECA9BDE22AEAh          
+0x1400d99ec : not     rdx                             
+0x1400d99ef : lea     rdx, [r9+rdx]                   
+0x1400d99f3 : jmp     loc_1400D86A6                   
+0x1400d86a8 : mov     r9, 0DA161356421DD513h          
+0x1400d86b2 : not     r9                              
+0x1400d86b5 : lea     r9, [rdx+r9]                    
+0x1400d86bf : mov     [rbp+8], r9                     
+0x1400d86c9 : movzx   r8, r8b                         
+0x1400d86cd : sub     r8, 1                           
+0x1400d86d1 : jmp     loc_1400D7E10                   
+0x1400d7e11 : cmp     r8, 0C8h                        
+0x1400d7e18 : jnb     def_1400D655C; jumptable 00000001400D655C default case, cases 1-6,8,13,14,33-36,38,41-44,49,50,52,54,57-60,62,65-67,69-74,77-80,82,83,85-90,93-96,98-113,115,117,119,121-123,126,128-131,133,134,144-147,149,152-157,159,162-164,166-168,170-177,182,185-193,196-199

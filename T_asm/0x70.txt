@@ -1,0 +1,82 @@
+0x70 p_a p_b p_c p_d
+
+0x64D1
+
+*(PUCHAR)p_a = *(PUCHAR)p_b & *(PUCHAR)p_c;
+*(PULONG32)p_d = rf;
+----------------------------------------
+
+0x1400d7f29 : mov     r9, [rbp+8]                     
+0x1400d7f36 : mov     r8w, [r9]                       
+0x1400d7f3a : xor     r8w, 64D1h                      
+0x1400d7f40 : mov     rdx, 5003A1915261CE58h          
+0x1400d7f4a : not     rdx                             
+0x1400d7f4d : lea     rdx, [r10+rdx]                  
+0x1400d7f51 : movzx   r8, r8w                         
+0x1400d7f55 : mov     rcx, 0AFFC5E6EAD9E31A6h         
+0x1400d7f5f : not     rcx                             
+0x1400d7f62 : add     r8, rcx                         
+0x1400d7f65 : lea     r8, [rdx+r8]                    p_a = r8
+0x1400d7f69 : lea     r9, [r9+2]                      
+0x1400d7f6d : mov     dx, [r9]                        
+0x1400d7f71 : jmp     loc_1400D7EBC                   
+0x1400d7ebe : xor     dx, 64D1h                       
+0x1400d7ec3 : movzx   rdx, dx                         
+0x1400d7ec7 : lea     rdx, [r10+rdx]                  p_b = rdx
+0x1400d7ecb : mov     dl, [rdx]                       dl = *(PUCHAR)p_b
+0x1400d7ecd : lea     r9, [r9+2]                      
+0x1400d7ed1 : mov     cx, [r9]                        
+0x1400d7ed5 : xor     cx, 64D1h                       
+0x1400d7eda : mov     rax, 0BADEC6510D4497C1h         
+0x1400d7ee4 : not     rax                             
+0x1400d7ee7 : lea     rax, [r10+rax]                  
+0x1400d7eeb : movzx   rcx, cx                         
+0x1400d7eef : mov     rbx, 452139AEF2BB683Dh          
+0x1400d7ef9 : not     rbx                             
+0x1400d7efc : add     rcx, rbx                        
+0x1400d7eff : lea     rcx, [rax+rcx]                  p_c = rcx
+0x1400d7f03 : mov     cl, [rcx]                       cl = *(PUCHAR)p_c
+0x1400d7f05 : lea     r9, [r9+2]                      
+0x1400d7f09 : mov     ax, [r9]                        
+0x1400d7f0d : xor     ax, 64D1h                       
+0x1400d7f11 : jmp     loc_1400DACDE                   
+0x1400dacdf : movzx   rax, ax                         
+0x1400dace3 : lea     rax, [r10+rax]                  p_d = rax
+0x1400dace7 : pushfq                                  
+0x1400dace8 : mov     rbx, [rsp+90h+var_90]           
+0x1400dacec : lea     rsp, [rsp+8]                    
+0x1400dacf1 : mov     esi, [rax]                      rf
+0x1400dacf3 : mov     esi, esi                        
+0x1400dacf5 : lea     rsp, [rsp-8]                    
+0x1400dacfa : mov     [rsp+90h+var_90], rsi           
+0x1400dacfe : popfq                                   
+0x1400dacff : and     dl, cl                          dl = dl & cl
+0x1400dad01 : pushfq                                  
+0x1400dad02 : mov     rcx, [rsp+90h+var_90]           
+0x1400dad06 : lea     rsp, [rsp+8]                    
+0x1400dad0b : mov     [rax], ecx                      *(PULONG32)p_d = rf
+0x1400dad0d : lea     rsp, [rsp-8]                    
+0x1400dad12 : mov     [rsp+90h+var_90], rbx           
+0x1400dad16 : jmp     loc_1400DA6E5                   
+0x1400da6e6 : popfq                                   
+0x1400da6e7 : mov     [r8], dl                        *(PUCHAR)p_a = dl
+0x1400da6ea : lea     r9, [r9+2]                      
+0x1400da6f3 : mov     [rbp+8], r9                     
+0x1400da6fc : jmp     loc_1400D7232                   
+0x1400d7234 : mov     r9, [rbp+8]                     
+0x1400d7240 : jmp     loc_1400D99D9                   
+0x1400d99db : mov     r8b, [r9]                       
+0x1400d99de : xor     r8b, 5Dh                        
+0x1400d99e2 : mov     rdx, 25E9ECA9BDE22AEAh          
+0x1400d99ec : not     rdx                             
+0x1400d99ef : lea     rdx, [r9+rdx]                   
+0x1400d99f3 : jmp     loc_1400D86A6                   
+0x1400d86a8 : mov     r9, 0DA161356421DD513h          
+0x1400d86b2 : not     r9                              
+0x1400d86b5 : lea     r9, [rdx+r9]                    
+0x1400d86bf : mov     [rbp+8], r9                     
+0x1400d86c9 : movzx   r8, r8b                         
+0x1400d86cd : sub     r8, 1                           
+0x1400d86d1 : jmp     loc_1400D7E10                   
+0x1400d7e11 : cmp     r8, 0C8h                        
+0x1400d7e18 : jnb     def_1400D655C; jumptable 00000001400D655C default case, cases 1-6,8,13,14,33-36,38,41-44,49,50,52,54,57-60,62,65-67,69-74,77-80,82,83,85-90,93-96,98-113,115,117,119,121-123,126,128-131,133,134,144-147,149,152-157,159,162-164,166-168,170-177,182,185-193,196-199

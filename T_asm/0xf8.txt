@@ -1,0 +1,35 @@
+0xf8 a_ULONG64
+
+
+
+jmp a_ULONG64;
+----------------------------------------
+
+0x1400d6916 : mov     r9, [rbp+8]                     
+0x1400d691a : jmp     loc_1400D7E46                   
+0x1400d7e51 : mov     r9, [r9]                        
+0x1400d7e54 : mov     r15, 0FFFFFFFFFFFFFFFEh         
+0x1400d7e5e : not     r15                             
+0x1400d7e61 : jmp     loc_1400D8A6E                   
+0x1400d8a70 : rdsspq  r15                             
+0x1400d8a75 : cmp     r15, 1                          
+0x1400d8a79 : jz      loc_1400DB4C0                   
+0x1400d8a7f : jmp     loc_1400DA701                   
+0x1400da703 : mov     r15, 2                          
+0x1400da70a : incsspq r15                             
+0x1400da70f : jmp     loc_1400DB4C0                   
+0x1400db4c0 : lea     rsp, [rbp+68h]                  
+0x1400db4c4 : mov     r15, [rsp+28h+var_28]           
+0x1400db4c8 : jmp     loc_1400DB434                   
+0x1400db436 : lea     rsp, [rsp+8]                    
+0x1400db43b : mov     rbp, [rsp+20h+var_20]           
+0x1400db43f : lea     rsp, [rsp+8]                    
+0x1400db444 : jmp     loc_1400D6209                   
+0x1400d620a : mov     rdi, [rsp+18h+var_18]           
+0x1400d620e : lea     rsp, [rsp+8]                    
+0x1400d6213 : mov     rsi, [rsp+10h+var_10]           
+0x1400d6217 : lea     rsp, [rsp+8]                    
+0x1400d621c : mov     rbx, [rsp+8+var_8]              
+0x1400d6220 : lea     rsp, [rsp+8]                    
+0x1400d6225 : jmp     loc_1400D90B4                   
+0x1400d90b5 : jmp     r9                              
