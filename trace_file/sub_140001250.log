@@ -1,0 +1,78 @@
+ vstart 140059dc2vend 140059ed6
+ 140059dc2 : v_mov_iregb_b                      ( iregb  :[ r10 + 0x90 ] ,b      :0x6             );
+ 140059dc6 : v_mov_iregll_ll                    ( iregll :[ r10 + 0x98 ] ,ll     :0x1             );
+ 140059dd1 : v_mov_iregll_ll                    ( iregll :[ r10 + 0xa0 ] ,ll     :0x1             );
+ 140059ddc : v_mov_iregll_ll                    ( iregll :[ r10 + 0xa8 ] ,ll     :0x600           );
+ 140059de7 : v_mov_iregll_ll                    ( iregll :[ r10 + 0x0 ]  ,ll     :0x140001250     );
+ 140059df2 : v_mov_iregll_iregll                ( iregll :[ r10 + 0xa8 ] ,iregll :PO_rsp          );
+ 140059df7 : v_mov_iregll_ll                    ( iregll :[ r10 + 0xa0 ] ,ll     :0x28            );
+ 140059e02 : v_not_oregll_iregll                ( oregll :[ r10 + 0xb0 ] ,iregll :[ r10 + 0xa8 ]  );
+ 140059e07 : v_add_oregll_iregll_iregll_oregl   ( oregll :[ r10 + 0xb8 ] ,iregll :[ r10 + 0xb0 ] ,iregll :[ r10 + 0xa0 ] ,oregl  :PO_rf           );
+ 140059e10 : v_mov_iregl_iregl                  ( iregl  :[ r10 + 0xc0 ] ,iregl  :PO_rf           );
+ 140059e15 : v_mov_iregl_l                      ( iregl  :[ r10 + 0xc4 ] ,l      :0x815           );
+ 140059e1c : v_and_oregl_iregl_iregl            ( oregl  :[ r10 + 0xc0 ] ,iregl  :[ r10 + 0xc0 ] ,iregl  :[ r10 + 0xc4 ]  );
+ 140059e23 : v_not_oregll_iregll                ( oregll :[ r10 + 0xb8 ] ,iregll :[ r10 + 0xb8 ]  );
+ 140059e28 : v_and_oregll_iregll_iregll_oregl   ( oregll :[ r10 + 0xa8 ] ,iregll :[ r10 + 0xb8 ] ,iregll :[ r10 + 0xb8 ] ,oregl  :PO_rf           );
+ 140059e31 : v_mov_iregl_l                      ( iregl  :[ r10 + 0xcc ] ,l      :0xfffff7ea      );
+ 140059e38 : v_and_oregl_iregl_iregl            ( oregl  :PO_rf          ,iregl  :PO_rf          ,iregl  :[ r10 + 0xcc ]  );
+ 140059e3f : v_add_oregl_iregl_iregl            ( oregl  :PO_rf          ,iregl  :PO_rf          ,iregl  :[ r10 + 0xc0 ]  );
+ 140059e46 : v_mov_iregll_iregll                ( iregll :PO_rsp         ,iregll :[ r10 + 0xa8 ]  );<----------------------------------
+ 140059e4b : v_mov_iregb_b                      ( iregb  :[ r10 + 0x90 ] ,b      :0x2             );
+ 140059e4f : v_mov_iregll_ll                    ( iregll :[ r10 + 0xa8 ] ,ll     :0x4             );
+ 140059e5a : v_mov_iregll_ll                    ( iregll :[ r10 + 0x0 ]  ,ll     :0x140001254     );
+ 140059e65 : v_mov_iregll_ll                    ( iregll :[ r10 + 0xa8 ] ,ll     :0x1400011a0     );
+ 140059e70 : v_mov_iregll_iregll                ( iregll :PO_rcx         ,iregll :[ r10 + 0xa8 ]  );<----------------------------------
+ 140059e75 : v_jmp_ll                           ( ll     :0x1400c7588     );<----------------------------------
+ 140059e7e : v_mov_iregll_ll                    ( iregll :[ r10 + 0x0 ]  ,ll     :0x140001260     );
+ 140059e89 : v_mov_iregll_ll                    ( iregll :[ r10 + 0xa8 ] ,ll     :0x14000d264     );
+ 140059e94 : v_mov_iregll_iregll                ( iregll :[ r10 + 0xa8 ] ,iregll :[ r10 + 0xa8 ]  );
+ 140059e99 : v_mov_iregb_b                      ( iregb  :[ r10 + 0x90 ] ,b      :0x0             );
+ 140059e9d : v_mov_ipreg_iregb                  ( ipreg  :[ r10 + 0xa8 ] ,iregb  :[ r10 + 0x90 ]  );<----------------------------------
+ 140059ea2 : v_mov_iregll_ll                    ( iregll :[ r10 + 0x0 ]  ,ll     :0x140001267     );
+ 140059ead : v_mov_iregll_iregll                ( iregll :[ r10 + 0xa8 ] ,iregll :PO_rsp          );
+ 140059eb2 : v_mov_iregll_ll                    ( iregll :[ r10 + 0xa0 ] ,ll     :0x28            );
+ 140059ebd : v_add_oregll_iregll_iregll_oregl   ( oregll :[ r10 + 0xa8 ] ,iregll :[ r10 + 0xa8 ] ,iregll :[ r10 + 0xa0 ] ,oregl  :PO_rf           );
+ 140059ec6 : v_mov_iregll_iregll                ( iregll :PO_rsp         ,iregll :[ r10 + 0xa8 ]  );<----------------------------------
+ 140059ecb : v_mov_iregll_ll                    ( iregll :[ r10 + 0x0 ]  ,ll     :0x14000126b     );
+ 140059ed6 : v_ret_iregx                        ( iregx  :PO_rax          );<----------------------------------
+<<--------------------------------------------------------------------------------------------
+ 140059e02 : v_not_oregll_iregll                ( oregll :[ r10 + 0xb0 ] ,iregll :PO_rsp          );
+ 140059e07 : v_add_oregll_iregll_iregll_oregl   ( oregll :[ r10 + 0xb8 ] ,iregll :[ r10 + 0xb0 ] ,ll     :0x28           ,oregl  :PO_rf           );
+ 140059e23 : v_not_oregll_iregll                ( oregll :[ r10 + 0xb8 ] ,iregll :[ r10 + 0xb8 ]  );
+ 140059e28 : v_and_oregll_iregll_iregll_oregl   ( oregll :[ r10 + 0xa8 ] ,iregll :[ r10 + 0xb8 ] ,iregll :[ r10 + 0xb8 ] ,oregl  :PO_rf           );
+ 140059e46 : v_mov_iregll_iregll                ( iregll :PO_rsp         ,iregll :[ r10 + 0xa8 ]  );<----------------------------------
+
+ 140059e70 : v_mov_iregll_iregll                ( iregll :PO_rcx         ,ll     :0x1400011a0     );<----------------------------------
+
+ 140059e75 : v_jmp_ll                           ( ll     :0x1400c7588     );<----------------------------------
+
+ 140059e9d : v_mov_ipreg_iregb                  ( ipreg  :0x14000d264    ,b      :0x0             );<----------------------------------
+
+ 140059ebd : v_add_oregll_iregll_iregll_oregl   ( oregll :[ r10 + 0xa8 ] ,iregll :PO_rsp         ,ll     :0x28           ,oregl  :PO_rf           );
+ 140059ec6 : v_mov_iregll_iregll                ( iregll :PO_rsp         ,iregll :[ r10 + 0xa8 ]  );<----------------------------------
+
+ 140059ed6 : v_ret_iregx                        ( iregx  :PO_rax          );<----------------------------------
+
+<<--------------------------------------------------------------------------------------------
+sub  rsp,0x28
+ 140059e02 : v_not_oregll_iregll                ( oregll :[ r10 + 0xb0 ] ,iregll :PO_rsp          );
+ 140059e07 : v_add_oregll_iregll_iregll_oregl   ( oregll :[ r10 + 0xb8 ] ,iregll :[ r10 + 0xb0 ] ,ll     :0x28           ,oregl  :PO_rf           );
+ 140059e23 : v_not_oregll_iregll                ( oregll :[ r10 + 0xb8 ] ,iregll :[ r10 + 0xb8 ]  );
+ 140059e28 : v_and_oregll_iregll_iregll_oregl   ( oregll :[ r10 + 0xa8 ] ,iregll :[ r10 + 0xb8 ] ,iregll :[ r10 + 0xb8 ] ,oregl  :PO_rf           );
+ 140059e46 : v_mov_iregll_iregll                ( iregll :PO_rsp         ,iregll :[ r10 + 0xa8 ]  );<----------------------------------
+
+mov  rcx,0x1400011a0
+ 140059e70 : v_mov_iregll_iregll                ( iregll :PO_rcx         ,ll     :0x1400011a0     );<----------------------------------
+
+call  0x140005e38
+ 140059e75 : v_jmp_ll                           ( ll     :0x1400c7588     );<----------------------------------
+
+mov  byte ptr[0x14000d264],0x0
+ 140059e9d : v_mov_ipreg_iregb                  ( ipreg  :0x14000d264    ,b      :0x0             );<----------------------------------
+
+add  rsp,0x28
+ 140059ebd : v_add_oregll_iregll_iregll_oregl   ( oregll :[ r10 + 0xa8 ] ,iregll :PO_rsp         ,ll     :0x28           ,oregl  :PO_rf           );
+ 140059ec6 : v_mov_iregll_iregll                ( iregll :PO_rsp         ,iregll :[ r10 + 0xa8 ]  );<----------------------------------
+
+ret  
+ 140059ed6 : v_ret_iregx                        ( iregx  :PO_rax          );<----------------------------------
