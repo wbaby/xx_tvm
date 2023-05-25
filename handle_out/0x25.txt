@@ -1,0 +1,47 @@
+0x25 
+
+----------------------------------------
+
+0x1400d8f7e : mov     r9, [rbp+8]                     
+0x1400d8f8b : jmp     loc_1400D7AB3                   
+0x1400d7ab4 : mov     r8w, [r9]                       
+0x1400d7ab8 : xor     r8w, 0D8E4h                     
+0x1400d7abe : mov     rdx, 0AE01E8EC1594B293h         
+0x1400d7ac8 : not     rdx                             
+0x1400d7acb : lea     rdx, [r10+rdx]                  
+0x1400d7acf : jmp     loc_1400D6D12                   
+0x1400d6d13 : movzx   r8, r8w                         
+0x1400d6d17 : mov     rcx, 51FE1713EA6B4D6Bh          
+0x1400d6d21 : not     rcx                             
+0x1400d6d24 : add     r8, rcx                         
+0x1400d6d27 : lea     r8, [rdx+r8]                    
+0x1400d6d2b : lea     r9, [r9+2]                      
+0x1400d6d2f : jmp     loc_1400D6316                   
+0x1400d6318 : mov     dx, [r9]                        
+0x1400d631c : xor     dx, 0D8E4h                      
+0x1400d6321 : movzx   rdx, dx                         
+0x1400d6325 : lea     rdx, [r10+rdx]                  
+0x1400d6329 : mov     dl, [rdx]                       
+0x1400d632b : movsx   edx, dl                         
+0x1400d632e : jmp     loc_1400DA862                   
+0x1400da864 : mov     [r8], edx                       
+0x1400da867 : lea     r9, [r9+2]                      
+0x1400da871 : mov     [rbp+8], r9                     
+0x1400da878 : jmp     loc_1400D5D9C                   
+0x1400d5da1 : jmp     loc_1400D8FEC                   
+0x1400d8fef : mov     r9, [rbp+8]                     
+0x1400d8ffc : mov     r8b, [r9]                       
+0x1400d8fff : xor     r8b, 5Dh                        
+0x1400d9003 : jmp     loc_1400D6A7C                   
+0x1400d6a7d : mov     rdx, 3CF00F6451FA8B0h           
+0x1400d6a87 : not     rdx                             
+0x1400d6a8a : lea     rdx, [r9+rdx]                   
+0x1400d6a8e : mov     r9, 0FC30FF09BAE0574Dh          
+0x1400d6a98 : not     r9                              
+0x1400d6a9b : lea     r9, [rdx+r9]                    
+0x1400d6aa5 : mov     [rbp+8], r9                     
+0x1400d6aa9 : jmp     loc_1400DB1EB                   
+0x1400db1f3 : movzx   r8, r8b                         
+0x1400db1f7 : sub     r8, 1                           
+0x1400db1fb : cmp     r8, 0C8h                        
+0x1400db202 : jnb     loc_1400D9954                   

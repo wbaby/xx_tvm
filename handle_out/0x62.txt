@@ -1,0 +1,99 @@
+0x62 
+
+----------------------------------------
+
+0x1400d779a : mov     r9, [rbp+8]                     
+0x1400d77a7 : mov     r8w, [r9]                       
+0x1400d77ab : xor     r8w, 7819h                      
+0x1400d77b1 : mov     rdx, 0D370A87804167FF2h         
+0x1400d77bb : not     rdx                             
+0x1400d77be : lea     rdx, [r10+rdx]                  
+0x1400d77c2 : movzx   r8, r8w                         
+0x1400d77c6 : mov     rcx, 2C8F5787FBE9800Ch          
+0x1400d77d0 : not     rcx                             
+0x1400d77d3 : add     r8, rcx                         
+0x1400d77d6 : lea     r8, [rdx+r8]                    
+0x1400d77da : lea     r9, [r9+2]                      
+0x1400d77de : jmp     loc_1400D7C96                   
+0x1400d7c98 : mov     dx, [r9]                        
+0x1400d7c9c : xor     dx, 7819h                       
+0x1400d7ca1 : movzx   rdx, dx                         
+0x1400d7ca5 : lea     rdx, [r10+rdx]                  
+0x1400d7ca9 : mov     edx, [rdx]                      
+0x1400d7cab : lea     r9, [r9+2]                      
+0x1400d7caf : mov     cx, [r9]                        
+0x1400d7cb3 : xor     cx, 7819h                       
+0x1400d7cb8 : mov     rax, 24C917EC758661A4h          
+0x1400d7cc2 : not     rax                             
+0x1400d7cc5 : lea     rax, [r10+rax]                  
+0x1400d7cc9 : movzx   rcx, cx                         
+0x1400d7ccd : mov     rbx, 0DB36E8138A799E5Ah         
+0x1400d7cd7 : not     rbx                             
+0x1400d7cda : add     rcx, rbx                        
+0x1400d7cdd : lea     rcx, [rax+rcx]                  
+0x1400d7ce1 : jmp     loc_1400DB124                   
+0x1400db126 : mov     ecx, [rcx]                      
+0x1400db128 : lea     r9, [r9+2]                      
+0x1400db12c : mov     ax, [r9]                        
+0x1400db130 : xor     ax, 7819h                       
+0x1400db134 : movzx   rax, ax                         
+0x1400db138 : lea     rax, [r10+rax]                  
+0x1400db13c : not     edx                             
+0x1400db13e : not     ecx                             
+0x1400db140 : pushfq                                  
+0x1400db141 : mov     rbx, [rsp+0]                    
+0x1400db145 : lea     rsp, [rsp+8]                    
+0x1400db14a : mov     esi, [rax]                      
+0x1400db14c : mov     esi, esi                        
+0x1400db14e : lea     rsp, [rsp-8]                    
+0x1400db153 : mov     [rsp+0], rsi                    
+0x1400db157 : popfq                                   
+0x1400db158 : and     edx, ecx                        
+0x1400db15a : pushfq                                  
+0x1400db15b : mov     rcx, [rsp+0]                    
+0x1400db15f : lea     rsp, [rsp+8]                    
+0x1400db164 : mov     [rax], ecx                      
+0x1400db166 : lea     rsp, [rsp-8]                    
+0x1400db16b : mov     [rsp+0], rbx                    
+0x1400db16f : popfq                                   
+0x1400db170 : not     edx                             
+0x1400db172 : pushfq                                  
+0x1400db173 : mov     rcx, [rsp+0]                    
+0x1400db177 : lea     rsp, [rsp+8]                    
+0x1400db17c : mov     ebx, [rax]                      
+0x1400db17e : jmp     loc_1400D785A                   
+0x1400d785b : mov     ebx, ebx                        
+0x1400d785d : lea     rsp, [rsp-8]                    
+0x1400d7862 : mov     [rsp+8+var_8], rbx              
+0x1400d7866 : popfq                                   
+0x1400d7867 : mov     ebx, edx                        
+0x1400d7869 : and     ebx, edx                        
+0x1400d786b : pushfq                                  
+0x1400d786c : mov     rdx, [rsp+8+var_8]              
+0x1400d7870 : lea     rsp, [rsp+8]                    
+0x1400d7875 : mov     [rax], edx                      
+0x1400d7877 : lea     rsp, [rsp-8]                    
+0x1400d787c : mov     [rsp+8+var_8], rcx              
+0x1400d7880 : popfq                                   
+0x1400d7881 : mov     [r8], ebx                       
+0x1400d7884 : lea     r9, [r9+2]                      
+0x1400d788b : jmp     loc_1400D5C09                   
+0x1400d5c0d : mov     [rbp+8], r9                     
+0x1400d5c17 : jmp     loc_1400D7232                   
+0x1400d7234 : mov     r9, [rbp+8]                     
+0x1400d7240 : jmp     loc_1400D99D9                   
+0x1400d99db : mov     r8b, [r9]                       
+0x1400d99de : xor     r8b, 5Dh                        
+0x1400d99e2 : mov     rdx, 25E9ECA9BDE22AEAh          
+0x1400d99ec : not     rdx                             
+0x1400d99ef : lea     rdx, [r9+rdx]                   
+0x1400d99f3 : jmp     loc_1400D86A6                   
+0x1400d86a8 : mov     r9, 0DA161356421DD513h          
+0x1400d86b2 : not     r9                              
+0x1400d86b5 : lea     r9, [rdx+r9]                    
+0x1400d86bf : mov     [rbp+8], r9                     
+0x1400d86c9 : movzx   r8, r8b                         
+0x1400d86cd : sub     r8, 1                           
+0x1400d86d1 : jmp     loc_1400D7E10                   
+0x1400d7e11 : cmp     r8, 0C8h                        
+0x1400d7e18 : jnb     loc_1400D9954                   

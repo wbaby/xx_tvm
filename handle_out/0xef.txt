@@ -1,0 +1,40 @@
+0xef 
+
+----------------------------------------
+
+0x1400d7bc9 : mov     r9, [rbp+8]                     
+0x1400d7bd5 : mov     r8w, [r9]                       
+0x1400d7bd9 : jmp     loc_1400D6B68                   
+0x1400d6b6a : xor     r8w, 144Ch                      
+0x1400d6b70 : mov     rdx, 89496F78AD85546Ah          
+0x1400d6b7a : not     rdx                             
+0x1400d6b7d : lea     rdx, [r10+rdx]                  
+0x1400d6b81 : movzx   r8, r8w                         
+0x1400d6b85 : mov     rcx, 76B69087527AAB94h          
+0x1400d6b8f : not     rcx                             
+0x1400d6b92 : add     r8, rcx                         
+0x1400d6b95 : lea     r8, [rdx+r8]                    
+0x1400d6b99 : jmp     loc_1400D8D8E                   
+0x1400d8d90 : lea     r9, [r9+2]                      
+0x1400d8d94 : mov     dl, [r9]                        
+0x1400d8d97 : mov     [r8], dl                        
+0x1400d8d9a : lea     r9, [r9+1]                      
+0x1400d8da4 : mov     [rbp+8], r9                     
+0x1400d8dae : jmp     loc_1400D9693                   
+0x1400d9694 : jmp     loc_1400D8FEC                   
+0x1400d8fef : mov     r9, [rbp+8]                     
+0x1400d8ffc : mov     r8b, [r9]                       
+0x1400d8fff : xor     r8b, 5Dh                        
+0x1400d9003 : jmp     loc_1400D6A7C                   
+0x1400d6a7d : mov     rdx, 3CF00F6451FA8B0h           
+0x1400d6a87 : not     rdx                             
+0x1400d6a8a : lea     rdx, [r9+rdx]                   
+0x1400d6a8e : mov     r9, 0FC30FF09BAE0574Dh          
+0x1400d6a98 : not     r9                              
+0x1400d6a9b : lea     r9, [rdx+r9]                    
+0x1400d6aa5 : mov     [rbp+8], r9                     
+0x1400d6aa9 : jmp     loc_1400DB1EB                   
+0x1400db1f3 : movzx   r8, r8b                         
+0x1400db1f7 : sub     r8, 1                           
+0x1400db1fb : cmp     r8, 0C8h                        
+0x1400db202 : jnb     loc_1400D9954                   
