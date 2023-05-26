@@ -1,5 +1,10 @@
-0x51 
+0x51 p_a p_b
 
+0xDB42
+
+*(PULONG64)p_a = ~(*(PULONG64)p_b);
+
+v_not_oregll_iregll
 ----------------------------------------
 
 0x1400d761e : mov     r9, [rbp+8]                     
@@ -14,16 +19,16 @@
 0x1400d75c2 : not     rcx                             
 0x1400d75c5 : add     r8, rcx                         
 0x1400d75c8 : jmp     loc_1400D5DA6                   
-0x1400d5da8 : lea     r8, [rdx+r8]                    
+0x1400d5da8 : lea     r8, [rdx+r8]                    p_a = r8
 0x1400d5dac : lea     r9, [r9+2]                      
 0x1400d5db0 : mov     dx, [r9]                        
 0x1400d5db4 : xor     dx, 0DB42h                      
 0x1400d5db9 : movzx   rdx, dx                         
-0x1400d5dbd : lea     rdx, [r10+rdx]                  
-0x1400d5dc1 : mov     rdx, [rdx]                      
-0x1400d5dc4 : not     rdx                             
+0x1400d5dbd : lea     rdx, [r10+rdx]                  p_b = rdx
+0x1400d5dc1 : mov     rdx, [rdx]                      rdx = *(PULONG64)p_b
+0x1400d5dc4 : not     rdx                             rdx = ~rdx
 0x1400d5dcd : jmp     loc_1400D9876                   
-0x1400d9878 : mov     [r8], rdx                       
+0x1400d9878 : mov     [r8], rdx                       *(PULONG64)p_a = rdx
 0x1400d9881 : lea     r9, [r9+2]                      
 0x1400d988b : mov     [rbp+8], r9                     
 0x1400d9895 : jmp     loc_1400DA7EA                   
@@ -41,7 +46,7 @@
 0x1400d777f : jmp     loc_1400D5B91                   
 0x1400d5b95 : mov     [rbp+8], r9                     
 0x1400d5b9e : movzx   r8, r8b                         
-0x1400d5ba2 : sub     r8, 1                           
+0x1400d5ba2 : sub     r8, 1; switch 200 cases         
 0x1400d5ba6 : jmp     loc_1400D98A8                   
 0x1400d98aa : cmp     r8, 0C8h                        
-0x1400d98b1 : jnb     loc_1400D9954                   
+0x1400d98b1 : jnb     def_1400D655C; jumptable 00000001400D655C default case, cases 1-6,8,13,14,33-36,38,41-44,49,50,52,54,57-60,62,65-67,69-74,77-80,82,83,85-90,93-96,98-113,115,117,119,121-123,126,128-131,133,134,144-147,149,152-157,159,162-164,166-168,170-177,182,185-193,196-199

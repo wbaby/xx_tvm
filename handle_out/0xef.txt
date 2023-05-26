@@ -1,5 +1,10 @@
-0xef 
+0xef p_a b_UCHAR
 
+0x144C
+
+*(PUCHAR)p_a = b_UCHAR;
+
+v_mov_iregb_b
 ----------------------------------------
 
 0x1400d7bc9 : mov     r9, [rbp+8]                     
@@ -13,11 +18,11 @@
 0x1400d6b85 : mov     rcx, 76B69087527AAB94h          
 0x1400d6b8f : not     rcx                             
 0x1400d6b92 : add     r8, rcx                         
-0x1400d6b95 : lea     r8, [rdx+r8]                    
+0x1400d6b95 : lea     r8, [rdx+r8]                    p_a = r8
 0x1400d6b99 : jmp     loc_1400D8D8E                   
 0x1400d8d90 : lea     r9, [r9+2]                      
-0x1400d8d94 : mov     dl, [r9]                        
-0x1400d8d97 : mov     [r8], dl                        
+0x1400d8d94 : mov     dl, [r9]                        dl
+0x1400d8d97 : mov     [r8], dl                        *(PUCHAR)p_a = dl
 0x1400d8d9a : lea     r9, [r9+1]                      
 0x1400d8da4 : mov     [rbp+8], r9                     
 0x1400d8dae : jmp     loc_1400D9693                   
@@ -37,4 +42,4 @@
 0x1400db1f3 : movzx   r8, r8b                         
 0x1400db1f7 : sub     r8, 1                           
 0x1400db1fb : cmp     r8, 0C8h                        
-0x1400db202 : jnb     loc_1400D9954                   
+0x1400db202 : jnb     def_1400D655C; jumptable 00000001400D655C default case, cases 1-6,8,13,14,33-36,38,41-44,49,50,52,54,57-60,62,65-67,69-74,77-80,82,83,85-90,93-96,98-113,115,117,119,121-123,126,128-131,133,134,144-147,149,152-157,159,162-164,166-168,170-177,182,185-193,196-199

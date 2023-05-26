@@ -1,5 +1,12 @@
-0x9e 
+0x9e p_a
 
+0x0AD7
+
+reg = *(PREG)p_a;//不恢复rsp
+rsp = [rsp];
+jmp r11;//也许等会要回虚拟机
+
+v_jmp_iregxR11
 ----------------------------------------
 
 0x1400d8e8c : mov     r9, [rbp+8]                     
@@ -14,7 +21,7 @@
 0x1400d80ef : mov     rdx, 3AF722B7E98EAE16h          
 0x1400d80f9 : not     rdx                             
 0x1400d80fc : add     r9, rdx                         
-0x1400d80ff : lea     r9, [r8+r9]                     
+0x1400d80ff : lea     r9, [r8+r9]                     p_a = r9
 0x1400d8103 : mov     r15, 0FFFFFFFFFFFFFFFEh         
 0x1400d810d : jmp     loc_1400D862D                   
 0x1400d862e : not     r15                             
@@ -45,78 +52,5 @@
 0x1400d9aab : popfq                                   
 0x1400d9aac : push    qword ptr [r9+20h]              
 0x1400d9ab0 : mov     r9, [r9+48h]                    
-0x1400d9ab4 : mov     rsp, [rsp+0]                    
+0x1400d9ab4 : mov     rsp, [rsp+90h+var_90]           
 0x1400d9ab8 : jmp     r11                             
-0xb :                                         
-0x140001000 : jmp     loc_140064F65                   
-0x140064f65 : lea     rsp, [rsp-298h]                 
-0x140064f6d : mov     [rsp+298h+var_288], rbp         
-0x140064f72 : mov     rbp, rsp                        
-0x140064f75 : pushfq                                  
-0x140064f76 : pop     qword ptr [rbp+0]               
-0x140064f79 : mov     [rbp+78h], r14                  
-0x140064f82 : mov     [rbp+30h], rdx                  
-0x140064f91 : mov     [rbp+50h], r9                   
-0x140064fa0 : jmp     short loc_140064FB1             
-0x140064fb2 : mov     [rbp+8], rax                    
-0x140064fc1 : mov     [rbp+60h], r11                  
-0x140064fcb : mov     [rbp+18h], rbx                  
-0x140064fcf : mov     [rbp+40h], rsp                  
-0x140064fd3 : mov     [rbp+28h], rdi                  
-0x140064fd7 : mov     [rbp+70h], r13                  
-0x140064fe1 : mov     [rbp+48h], r8                   
-0x140064feb : mov     [rbp+80h], r15                  
-0x140064ff2 : jmp     loc_140065077                   
-0x14006507e : mov     [rbp+58h], r10                  
-0x140065088 : mov     [rbp+38h], rsi                  
-0x14006508c : mov     [rbp+68h], r12                  
-0x140065096 : mov     [rbp+20h], rcx                  
-0x1400650a0 : pushfq                                  
-0x1400650a1 : add     qword ptr [rbp+40h], 298h       
-0x1400650a9 : popfq                                   
-0x1400650aa : lea     r11, [rbp+90h]                  
-0x1400650b1 : jmp     loc_1400652BA                   
-0x1400652bb : push    qword ptr [rbp+8]               
-0x1400652be : pop     qword ptr [r11]                 
-0x1400652c1 : push    qword ptr [rbp+18h]             
-0x1400652c4 : pop     qword ptr [r11+8]               
-0x1400652c8 : push    qword ptr [rbp+20h]             
-0x1400652cb : pop     qword ptr [r11+10h]             
-0x1400652cf : push    qword ptr [rbp+30h]             
-0x1400652d2 : pop     qword ptr [r11+18h]             
-0x1400652d6 : push    qword ptr [rbp+40h]             
-0x1400652d9 : pop     qword ptr [r11+20h]             
-0x1400652dd : push    qword ptr [rbp+10h]             
-0x1400652e0 : pop     qword ptr [r11+28h]             
-0x1400652e4 : push    qword ptr [rbp+38h]             
-0x1400652e7 : pop     qword ptr [r11+30h]             
-0x1400652eb : push    qword ptr [rbp+28h]             
-0x1400652ee : pop     qword ptr [r11+38h]             
-0x1400652f2 : push    qword ptr [rbp+48h]             
-0x1400652f5 : pop     qword ptr [r11+40h]             
-0x1400652f9 : jmp     loc_140065003                   
-0x140065005 : push    qword ptr [rbp+50h]             
-0x140065008 : pop     qword ptr [r11+48h]             
-0x14006500c : push    qword ptr [rbp+58h]             
-0x14006500f : pop     qword ptr [r11+50h]             
-0x140065013 : push    qword ptr [rbp+60h]             
-0x140065016 : pop     qword ptr [r11+58h]             
-0x14006501a : push    qword ptr [rbp+68h]             
-0x14006501d : pop     qword ptr [r11+60h]             
-0x140065021 : push    qword ptr [rbp+70h]             
-0x140065024 : pop     qword ptr [r11+68h]             
-0x140065028 : push    qword ptr [rbp+78h]             
-0x14006502b : pop     qword ptr [r11+70h]             
-0x14006502f : push    qword ptr [rbp+80h]             
-0x140065035 : pop     qword ptr [r11+78h]             
-0x140065039 : push    qword ptr [rbp+0]               
-0x14006503c : pop     qword ptr [r11+80h]             
-0x140065043 : lea     r11, qword_140018000+3Dh        
-0x14006504a : lea     r10, [rbp+88h]                  
-0x140065051 : lea     rsp, [rsp-8]                    
-0x140065056 : mov     [rsp], r10                      
-0x14006505a : lea     rsp, [rsp-8]                    
-0x14006505f : jmp     loc_14006530C                   
-0x14006530e : mov     [rsp], r11                      
-0x140065312 : call    sub_1400D5B02                   
-0x140065317 : int     3; Trap to Debugger             

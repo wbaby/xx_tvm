@@ -1,5 +1,11 @@
-0x4c 
+0x4c p_a p_b p_c p_d
 
+0xDD9D
+
+*(PUCHAR)p_a = *(PUCHAR)p_b + *(PUCHAR)p_c;
+*(PULONG32)p_d = rf;
+
+v_add_oregb_iregb_iregb_oregl
 ----------------------------------------
 
 0x1400d8199 : mov     r9, [rbp+8]                     
@@ -12,14 +18,14 @@
 0x1400d81c5 : mov     rcx, 0B2C72AA9075A0F42h         
 0x1400d81cf : not     rcx                             
 0x1400d81d2 : add     r8, rcx                         
-0x1400d81d5 : lea     r8, [rdx+r8]                    
+0x1400d81d5 : lea     r8, [rdx+r8]                    p_a = r8
 0x1400d81d9 : lea     r9, [r9+2]                      
 0x1400d81dd : mov     dx, [r9]                        
 0x1400d81e1 : xor     dx, 0DD9Dh                      
 0x1400d81e6 : movzx   rdx, dx                         
 0x1400d81ea : jmp     loc_1400D6D47                   
-0x1400d6d49 : lea     rdx, [r10+rdx]                  
-0x1400d6d4d : mov     dl, [rdx]                       
+0x1400d6d49 : lea     rdx, [r10+rdx]                  p_b = rdx
+0x1400d6d4d : mov     dl, [rdx]                       dl = *(PUCHAR)p_b
 0x1400d6d4f : lea     r9, [r9+2]                      
 0x1400d6d53 : mov     cx, [r9]                        
 0x1400d6d57 : xor     cx, 0DD9Dh                      
@@ -30,32 +36,32 @@
 0x1400d6d71 : mov     rbx, 373B84C1E1DCE54Ch          
 0x1400d6d7b : not     rbx                             
 0x1400d6d7e : add     rcx, rbx                        
-0x1400d6d81 : lea     rcx, [rax+rcx]                  
-0x1400d6d85 : mov     cl, [rcx]                       
+0x1400d6d81 : lea     rcx, [rax+rcx]                  p_c = rcx
+0x1400d6d85 : mov     cl, [rcx]                       cl = *(PUCHAR)p_c
 0x1400d6d87 : lea     r9, [r9+2]                      
 0x1400d6d8b : jmp     loc_1400DA085                   
 0x1400da086 : mov     ax, [r9]                        
 0x1400da08a : xor     ax, 0DD9Dh                      
 0x1400da08e : movzx   rax, ax                         
-0x1400da092 : lea     rax, [r10+rax]                  
+0x1400da092 : lea     rax, [r10+rax]                  p_d = rax
 0x1400da096 : pushfq                                  
-0x1400da097 : mov     rbx, [rsp+0]                    
+0x1400da097 : mov     rbx, [rsp+90h+var_90]           
 0x1400da09b : lea     rsp, [rsp+8]                    
-0x1400da0a0 : mov     esi, [rax]                      
+0x1400da0a0 : mov     esi, [rax]                      rf = *(PULONG32)p_d
 0x1400da0a2 : mov     esi, esi                        
 0x1400da0a4 : lea     rsp, [rsp-8]                    
-0x1400da0a9 : mov     [rsp+0], rsi                    
+0x1400da0a9 : mov     [rsp+90h+var_90], rsi           
 0x1400da0ad : popfq                                   
-0x1400da0ae : add     dl, cl                          
+0x1400da0ae : add     dl, cl                          dl = dl + cl
 0x1400da0b0 : pushfq                                  
-0x1400da0b1 : mov     rcx, [rsp+0]                    
+0x1400da0b1 : mov     rcx, [rsp+90h+var_90]           
 0x1400da0b5 : lea     rsp, [rsp+8]                    
-0x1400da0ba : mov     [rax], ecx                      
+0x1400da0ba : mov     [rax], ecx                      *(PULONG32)p_d = rf
 0x1400da0bc : lea     rsp, [rsp-8]                    
-0x1400da0c1 : mov     [rsp+0], rbx                    
+0x1400da0c1 : mov     [rsp+90h+var_90], rbx           
 0x1400da0c5 : jmp     loc_1400D7A6C                   
 0x1400d7a6d : popfq                                   
-0x1400d7a6e : mov     [r8], dl                        
+0x1400d7a6e : mov     [r8], dl                        *(PUCHAR)p_a = dl
 0x1400d7a71 : lea     r9, [r9+2]                      
 0x1400d7a7b : mov     [rbp+8], r9                     
 0x1400d7a85 : jmp     loc_1400D7232                   
@@ -75,4 +81,4 @@
 0x1400d86cd : sub     r8, 1                           
 0x1400d86d1 : jmp     loc_1400D7E10                   
 0x1400d7e11 : cmp     r8, 0C8h                        
-0x1400d7e18 : jnb     loc_1400D9954                   
+0x1400d7e18 : jnb     def_1400D655C; jumptable 00000001400D655C default case, cases 1-6,8,13,14,33-36,38,41-44,49,50,52,54,57-60,62,65-67,69-74,77-80,82,83,85-90,93-96,98-113,115,117,119,121-123,126,128-131,133,134,144-147,149,152-157,159,162-164,166-168,170-177,182,185-193,196-199

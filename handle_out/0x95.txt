@@ -1,5 +1,11 @@
-0x95 
+0x95 p_a
 
+0x805C
+
+reg = *(PREG)p_a;
+retn;//退出虚拟机
+
+v_ret_iregx
 ----------------------------------------
 
 0x1400d8ce0 : mov     r9, [rbp+8]                     
@@ -15,7 +21,7 @@
 0x1400d7031 : jmp     loc_1400D6716                   
 0x1400d6717 : not     rdx                             
 0x1400d671a : add     r9, rdx                         
-0x1400d671d : lea     r9, [r8+r9]                     
+0x1400d671d : lea     r9, [r8+r9]                     p_a = r9
 0x1400d6721 : mov     r15, 0FFFFFFFFFFFFFFFEh         
 0x1400d672b : not     r15                             
 0x1400d672e : rdsspq  r15                             
@@ -28,7 +34,7 @@
 0x1400d9981 : mov     rax, [r9]                       
 0x1400d998c : mov     rbx, [r9+8]                     
 0x1400d9993 : mov     rcx, [r9+10h]                   
-0x1400d99a3 : jmp     short loc_1400D9A06             
+0x1400d99a3 : jmp     loc_1400D9A06                   
 0x1400d9a07 : mov     rdx, [r9+18h]                   
 0x1400d9a14 : mov     rbp, [r9+28h]                   
 0x1400d9a18 : mov     rsi, [r9+30h]                   
@@ -46,5 +52,5 @@
 0x1400d876d : push    qword ptr [r9+20h]              
 0x1400d8771 : jmp     loc_1400D742E                   
 0x1400d7430 : mov     r9, [r9+48h]                    
-0x1400d7434 : mov     rsp, [rsp+0]                    
+0x1400d7434 : mov     rsp, [rsp+90h+var_90]           
 0x1400d7438 : retn                                    

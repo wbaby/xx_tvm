@@ -1,5 +1,10 @@
-0x4b 
+0x4b p_a p_b
 
+0xD916
+
+*(PUSHORT)p_a = *(PUSHORT)p_b;
+
+v_mov_iregw_iregw
 ----------------------------------------
 
 0x1400d9376 : mov     r9, [rbp+8]                     
@@ -14,14 +19,14 @@
 0x1400da203 : not     rcx                             
 0x1400da206 : add     r8, rcx                         
 0x1400da209 : jmp     loc_1400DB56F                   
-0x1400db570 : lea     r8, [rdx+r8]                    
+0x1400db570 : lea     r8, [rdx+r8]                    p_a = r8
 0x1400db574 : lea     r9, [r9+2]                      
 0x1400db578 : mov     dx, [r9]                        
 0x1400db57c : xor     dx, 0D916h                      
 0x1400db581 : movzx   rdx, dx                         
-0x1400db585 : lea     rdx, [r10+rdx]                  
-0x1400db589 : mov     dx, [rdx]                       
-0x1400db58c : mov     [r8], dx                        
+0x1400db585 : lea     rdx, [r10+rdx]                  p_b = rdx
+0x1400db589 : mov     dx, [rdx]                       dx = *(PUSHORT)p_b
+0x1400db58c : mov     [r8], dx                        *(PUSHORT)p_a = dx
 0x1400db590 : lea     r9, [r9+2]                      
 0x1400db597 : jmp     loc_1400D719F                   
 0x1400d71a4 : mov     [rbp+8], r9                     
@@ -39,7 +44,7 @@
 0x1400d777f : jmp     loc_1400D5B91                   
 0x1400d5b95 : mov     [rbp+8], r9                     
 0x1400d5b9e : movzx   r8, r8b                         
-0x1400d5ba2 : sub     r8, 1                           
+0x1400d5ba2 : sub     r8, 1; switch 200 cases         
 0x1400d5ba6 : jmp     loc_1400D98A8                   
 0x1400d98aa : cmp     r8, 0C8h                        
-0x1400d98b1 : jnb     loc_1400D9954                   
+0x1400d98b1 : jnb     def_1400D655C; jumptable 00000001400D655C default case, cases 1-6,8,13,14,33-36,38,41-44,49,50,52,54,57-60,62,65-67,69-74,77-80,82,83,85-90,93-96,98-113,115,117,119,121-123,126,128-131,133,134,144-147,149,152-157,159,162-164,166-168,170-177,182,185-193,196-199

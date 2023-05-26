@@ -1,5 +1,10 @@
-0xe9 
+0xe9 p_a b_ULONG32
 
+0x448A
+
+*(PULONG32)p_a = b_ULONG32;
+
+v_mov_iregl_l
 ----------------------------------------
 
 0x1400d9449 : mov     r9, [rbp+8]                     
@@ -14,7 +19,7 @@
 0x1400d72c1 : mov     rcx, 81A9A62C6567456Ah          
 0x1400d72cb : not     rcx                             
 0x1400d72ce : add     r8, rcx                         
-0x1400d72d1 : lea     r8, [rdx+r8]                    
+0x1400d72d1 : lea     r8, [rdx+r8]                    p_a  = r8
 0x1400d72d5 : jmp     loc_1400D9F02                   
 0x1400d9f04 : lea     r9, [r9+2]                      
 0x1400d9f08 : mov     edx, [r9]                       
@@ -36,7 +41,7 @@
 0x1400d777f : jmp     loc_1400D5B91                   
 0x1400d5b95 : mov     [rbp+8], r9                     
 0x1400d5b9e : movzx   r8, r8b                         
-0x1400d5ba2 : sub     r8, 1                           
+0x1400d5ba2 : sub     r8, 1; switch 200 cases         
 0x1400d5ba6 : jmp     loc_1400D98A8                   
 0x1400d98aa : cmp     r8, 0C8h                        
-0x1400d98b1 : jnb     loc_1400D9954                   
+0x1400d98b1 : jnb     def_1400D655C; jumptable 00000001400D655C default case, cases 1-6,8,13,14,33-36,38,41-44,49,50,52,54,57-60,62,65-67,69-74,77-80,82,83,85-90,93-96,98-113,115,117,119,121-123,126,128-131,133,134,144-147,149,152-157,159,162-164,166-168,170-177,182,185-193,196-199

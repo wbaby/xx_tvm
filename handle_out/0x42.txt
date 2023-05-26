@@ -1,5 +1,10 @@
-0x42 
+0x42 p_a p_b
 
+0x5431
+
+*(*(PULONG32 *)p_a) = *(PULONG32)p_b;
+
+v_mov_ipreg_iregl
 ----------------------------------------
 
 0x1400d5e13 : mov     r9, [rbp+8]                     
@@ -14,15 +19,15 @@
 0x1400d61f0 : not     rcx                             
 0x1400d61f3 : add     r8, rcx                         
 0x1400d61f6 : jmp     loc_1400D8848                   
-0x1400d884a : lea     r8, [rdx+r8]                    
-0x1400d884e : mov     r8, [r8]                        
+0x1400d884a : lea     r8, [rdx+r8]                    p_a = r8
+0x1400d884e : mov     r8, [r8]                        r8 = *(PULONG64)p_a
 0x1400d8851 : lea     r9, [r9+2]                      
 0x1400d8855 : mov     dx, [r9]                        
 0x1400d8859 : xor     dx, 5431h                       
 0x1400d885e : movzx   rdx, dx                         
-0x1400d8862 : lea     rdx, [r10+rdx]                  
-0x1400d8866 : mov     edx, [rdx]                      
-0x1400d8868 : mov     [r8], edx                       
+0x1400d8862 : lea     rdx, [r10+rdx]                  p_b = rdx
+0x1400d8866 : mov     edx, [rdx]                      edx = *(PULONG32)p_b
+0x1400d8868 : mov     [r8], edx                       *(PULONG32)r8 = edx
 0x1400d886b : lea     r9, [r9+2]                      
 0x1400d886f : jmp     loc_1400DB25E                   
 0x1400db266 : mov     [rbp+8], r9                     
@@ -43,4 +48,4 @@
 0x1400d86cd : sub     r8, 1                           
 0x1400d86d1 : jmp     loc_1400D7E10                   
 0x1400d7e11 : cmp     r8, 0C8h                        
-0x1400d7e18 : jnb     loc_1400D9954                   
+0x1400d7e18 : jnb     def_1400D655C; jumptable 00000001400D655C default case, cases 1-6,8,13,14,33-36,38,41-44,49,50,52,54,57-60,62,65-67,69-74,77-80,82,83,85-90,93-96,98-113,115,117,119,121-123,126,128-131,133,134,144-147,149,152-157,159,162-164,166-168,170-177,182,185-193,196-199
